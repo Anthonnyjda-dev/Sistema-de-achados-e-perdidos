@@ -34,7 +34,24 @@ Para a construção deste sistema, foram aplicados diversos conceitos fundamenta
 
 1.  Certifique-se de ter o Python instalado em sua máquina.
 2.  Clone este repositório ou baixe os arquivos da pasta do projeto.
-3.  Abra o terminal, navegue até o diretório do projeto e execute o arquivo principal:
+3.  Abra o terminal, navegue até o diretório do projeto e crie um ambiente virtual:
+    ```bash
+    python -m venv venv
+    ```
+4.  Ative o ambiente virtual:
+    * **Windows:**
+      ```bash
+      venv\Scripts\activate
+      ```
+    * **Linux/Mac:**
+      ```bash
+      source venv/bin/activate
+      ```
+5.  Instale as dependências necessárias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+6.  Execute o arquivo principal do sistema:
     ```bash
     python main.py
     ```
