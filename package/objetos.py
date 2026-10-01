@@ -60,5 +60,7 @@ def cadastrar_objeto(lista_objetos):
 def localizar_por_codigo(lista_objetos, codigo_procurado):
     """LOCALIZAR UM OBJETO PELO SEU CÓDIGO"""
     for objeto in lista_objetos:
-        if codigo_objeto == codigo_procurado:
-            
+        if objeto['Codigo'] == codigo_procurado:
+            return objeto
+        
+    return None

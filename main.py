@@ -1,6 +1,9 @@
-from package.objetos import cadastrar_objeto
+from package.objetos import *
 objetos = []
 
-cadastrar_objeto(objetos)
+objeto_cadastrado = cadastrar_objeto(objetos)
+print(objeto_cadastrado)
 
-print(objetos)
+resultado = localizar_por_codigo(objetos, 1)
+print('O resultado da busca: ')
+print(resultado)
