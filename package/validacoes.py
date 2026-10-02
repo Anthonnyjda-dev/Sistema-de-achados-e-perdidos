@@ -24,8 +24,8 @@ def validar_data():
             print("mês inválido")
             continue
 
-        if ano < 1:
-            print("Ano inválido. ")
+        if ano < 2000 or ano > 2100:
+            print("Ano inválido. Digite um ano entre 2000 e 2100.")
             continue
 
         meses_30_dias = (4,6,9,11)

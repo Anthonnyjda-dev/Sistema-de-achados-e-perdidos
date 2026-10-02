@@ -1,3 +1,5 @@
+from package.validacoes import validar_data
+
 def gerar_codigo(lista_obejtos):
     """BLOCO QUE GERA O CODIGO DOS ITENS PERDIDOS"""
     if lista_obejtos == []:
@@ -44,20 +46,10 @@ def cadastrar_objeto(lista_objetos):
         print('Tipo inválido')
         return
 
-    dia = int(input('Informe o dia: '))
-    mes = int(input('Informe o mês: '))
-    ano = int(input('Informe o ano: '))
-
-    if dia < 1 or dia > 31:
-        print('Dia inválido')
-        return
-    if mes < 1 or mes > 12:   #validação
-        print('Mês inválido')
-        return
-
-    data = (dia, mes, ano)
+    data = validar_data()
 
     responsavel = input('Digite o  nome do responsável: ').strip()
+    
     if responsavel == '':
         print('Responsavel vazio.')
         return
