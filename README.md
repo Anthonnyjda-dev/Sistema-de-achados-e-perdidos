@@ -16,11 +16,12 @@ Este é um projeto de laboratório de programação desenvolvido em Python. A ap
 O sistema foi modularizado para separar as responsabilidades de cada parte do código:
 
 *   `main.py`: Ponto de entrada do sistema, contendo o menu principal interativo e a integração de todos os módulos.
-*   `objetos.py`: Módulo responsável pela geração de códigos, cadastro, listagem, atualização e remoção dos itens.
-*   `buscas.py`: Concentra todas as lógicas de pesquisa de objetos.
-*   `devolucoes.py`: Gerencia a alteração de status e os registros de entrega.
-*   `relatorios.py`: Lida com a ordenação dos dados e a geração de estatísticas por categorias.
-*   `validacoes.py`: Centraliza o tratamento de entradas de dados, validando textos, números e datas para evitar que o programa encerre inesperadamente.
+*   `package/objetos.py`: Módulo responsável pela geração de códigos, cadastro, listagem, atualização e remoção dos itens.
+*   `package/buscas.py`: Concentra todas as lógicas de pesquisa de objetos.
+*   `package/devolucoes.py`: Gerencia a alteração de status e os registros de entrega.
+*   `package/relatorios.py`: Lida com a ordenação dos dados e a geração de estatísticas por categorias.
+*   `package/validacoes.py`: Centraliza o tratamento de entradas de dados, validando textos, números e datas para evitar que o programa encerre inesperadamente.
+*   `docs/PLANO_DE_TESTES.md`: Reúne os testes manuais e os resultados esperados antes da entrega.
 
 ## 🛠️ Tecnologias e Estruturas Utilizadas
 
@@ -32,7 +33,7 @@ Para a construção deste sistema, foram aplicados diversos conceitos fundamenta
 
 ## 💻 Como Executar
 
-1.  Certifique-se de ter o Python instalado em sua máquina.
+1.  Certifique-se de ter o Python 3.10 ou superior instalado em sua máquina.
 2.  Clone este repositório ou baixe os arquivos da pasta do projeto.
 3.  Abra o terminal, navegue até o diretório do projeto e crie um ambiente virtual:
     ```bash
@@ -51,10 +52,14 @@ Para a construção deste sistema, foram aplicados diversos conceitos fundamenta
     ```bash
     pip install -r requirements.txt
     ```
-6.  Execute o arquivo principal do sistema:
+6.  Execute o arquivo principal do sistema (`python3` no Linux/Mac ou `python` no Windows):
     ```bash
-    python main.py
+    python3 main.py
     ```
+
+## ✅ Testes
+
+Antes da entrega ou apresentação, execute todos os casos descritos no [Plano de Testes](docs/PLANO_DE_TESTES.md). O documento contém os dados sugeridos, os passos de cada cenário e os resultados esperados.
 
 ## 👥 Equipe e Prazos
 
