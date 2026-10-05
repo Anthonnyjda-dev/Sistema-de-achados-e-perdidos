@@ -119,6 +119,7 @@ def escolher_campo():
 def main():
     objetos = []
     devolucoes = []
+    codigos_utilizados = []
 
     while True:
         exibir_menu()
@@ -131,7 +132,7 @@ def main():
 
         match opcao:
             case 1:
-                novo = cadastrar_objeto(objetos)
+                novo = cadastrar_objeto(objetos, codigos_utilizados)
                 if novo is not None:
                     print('Objeto cadastrado! Código:', novo['codigo'])
             case 2:

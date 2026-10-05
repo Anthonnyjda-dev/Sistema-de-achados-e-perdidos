@@ -1,21 +1,24 @@
 from package.validacoes import validar_data
 
-def gerar_codigo(lista_obejtos):
-    """BLOCO QUE GERA O CODIGO DOS ITENS PERDIDOS"""
-    if lista_obejtos == []:
-        return 1
-
+def gerar_codigo(lista_objetos, codigos_utilizados=None):
+    """Gera um código maior que todos os códigos já utilizados."""
     maior_codigo = 0
 
-    for objeto in lista_obejtos:
+    for objeto in lista_objetos:
         if objeto['codigo'] > maior_codigo:
-         maior_codigo = objeto['codigo']
+            maior_codigo = objeto['codigo']
+
+    if codigos_utilizados is not None:
+        for codigo in codigos_utilizados:
+            if codigo > maior_codigo:
+                maior_codigo = codigo
+
     return maior_codigo + 1
 
 
-def cadastrar_objeto(lista_objetos):
+def cadastrar_objeto(lista_objetos, codigos_utilizados=None):
     """CADASTRA UM NOVO OBJETO NA LISTA"""
-    novo_codigo = gerar_codigo(lista_objetos)
+    novo_codigo = gerar_codigo(lista_objetos, codigos_utilizados)
     nome = input('Digite o nome do objeto: ').strip()
     if nome == "":
         print('Nome vazio.')
@@ -67,6 +70,8 @@ def cadastrar_objeto(lista_objetos):
     }
 
     lista_objetos.append(novo_objeto)
+    if codigos_utilizados is not None:
+        codigos_utilizados.append(novo_codigo)
     return novo_objeto
 
 def localizar_por_codigo(lista_objetos, codigo_procurado):
